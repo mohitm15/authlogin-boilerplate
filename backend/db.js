@@ -1,19 +1,10 @@
-//import { MongoClient } from 'mongodb';
-const MongoClient = require('mongodb');
+const mongoose = require('mongoose');
+const mongoURL = "mongodb://localhost:27017/?readPreference=primary&appname=MongoDB%20Compass&ssl=false";
 
-let client;
-
-const initializeDbConnection = async () => {
-    client = await MongoClient.connect('mongodb://localhost:27017', {
-        useNewUrlParser:true,
-        useUnifiedTopology: true,
-    });
-    return client;
+const connectToMongo = async() => {
+    mongoose.connect(mongoURL,  {useNewUrlParser: true}, ()=> {
+        console.log("Connected to Mongo Successfully!");
+    })
 }
 
-const getDbConnection = dbName => {
-    const db =  initializeDbConnection().db(dbName);
-    return db;
-}
-
-module.exports =getDbConnection;
+module.exports = connectToMongo;

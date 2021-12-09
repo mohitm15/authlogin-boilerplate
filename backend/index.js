@@ -1,16 +1,21 @@
-const initializeDbConnection = require('./db');
+const connectToMongo = require('./db');
 const express = require('express');
 
-const PORT = 8080;
 
+connectToMongo();
+var cors = require('cors');
 const app = express();
+const PORT = 5000;
 
 
+//to use req body 
+app.use(cors())
 app.use(express.json());
 
-initializeDbConnection()
-    .then(()=> {
-        app.listen(PORT, ()=> {
-            console.log(`Server is listening on port ${PORT}`);
-        });
-    });
+//Available routes
+app.use('/api/signup',require('./routes/signupRoute'));
+app.use('/api/login',require('./routes/loginRoute'));
+
+app.listen(PORT, ()=> {
+    console.log(`Server listening at http://localhost:${PORT}`)
+})
