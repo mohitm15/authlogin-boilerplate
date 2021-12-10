@@ -39,6 +39,8 @@ router.post("/",
           email: req.body.email,
           password: secPass,
           role: req.body.role,
+          forgetQues: req.body.forgetQues,
+          forgetAns: req.body.forgetAns,
         });
   
         //passing the id as data to make jwt token

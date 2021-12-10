@@ -30,6 +30,15 @@ const UserSchema = new Schema ({
         type: String,
         required: true,
         //admin,client, guest
+    },
+    forgetQues: {
+        type: String,
+        required: true,
+        // favFood, favCitytoVisit, favSport
+    },
+    forgetAns: {
+        type: String,
+        require: true,
     }
 })
 
