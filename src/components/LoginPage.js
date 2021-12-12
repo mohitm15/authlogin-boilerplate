@@ -10,7 +10,7 @@ const [credentials, setCredentials] = useState({email:"",password:""});
 
 const onChange = (e) => {
     setCredentials({ ...credentials, [e.target.name]: e.target.value})
-    //console.log(credentials.email, credentials.password);
+    console.log(credentials);
 }
 
 
@@ -50,7 +50,7 @@ const goToSignUp = () => {
 
   return (
     <>
-      <div className="container my-5">
+      <div className="container my-3">
         <div id="loginbody">
           <div className="mt-3">
             <h2 className="my-3 display-3">Login Here</h2>
