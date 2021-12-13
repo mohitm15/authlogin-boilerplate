@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const SignupPage = () => {
+const SignupPage = (props) => {
   const navigate = useNavigate();
 
   const goToLogin = () => {
@@ -23,32 +23,39 @@ const SignupPage = () => {
       ...prevCredentials,
       [key]: e.target.value,
     }));
-    console.log(credentials);
+    //console.log(credentials);
   };
-
-  // const onSelect = (e, key) => {
-  //   setCredentials((prevCredentials) => ({
-  //     ...prevCredentials,
-  //     [key]: e.target.value,
-  //   }));
-  //   console.log(credentials)
-  // }
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch("http://localhost:5000/api/signup",{
-      method:'POST',
-      headers:{
-        'Content-Type': 'application/json',
+    const response = await fetch("http://localhost:5000/api/signup", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify({ name:credentials.name, email:credentials.email, password:credentials.password })
+      body: JSON.stringify({
+        name: credentials.name,
+        email: credentials.email,
+        password: credentials.password,
+        role: credentials.role,
+        forgetQues: credentials.forgetQues,
+        forgetAns: credentials.forgetAns,
+      }),
     });
 
     const json = await response.json();
-    console.log(json);
+    //console.log(json);
 
-    
-  }
+    if(json.success === true) {
+      localStorage.setItem('token', json.authToken);
+      navigate("/");
+      props.showAlert("User Registered Successfully !","info");
+    }
+    else {
+      props.showAlert("Invalid Credentials","danger");
+    }
+
+  };
 
   return (
     <>
@@ -71,7 +78,7 @@ const SignupPage = () => {
                   aria-describedby="emailHelp"
                 />
               </div>
-{/* --------------- */}
+              {/* --------------- */}
               <div className="mb-3">
                 <label htmlFor="email" className="form-label">
                   Email{" "}
@@ -128,7 +135,7 @@ const SignupPage = () => {
                     name="roleOptions"
                     id="role1"
                     value="admin"
-                    onSelect={(e) => console.log(e)}
+                    onChange={(e) => onChange(e, "role")}
                   />
                   <label className="form-check-label" htmlFor="role1">
                     Admin
@@ -172,9 +179,11 @@ const SignupPage = () => {
                     onChange={(e) => onChange(e, "forgetQues")}
                   >
                     <option>Open this select menu</option>
-                    <option value="Favourite Sport" >Favourite Sport</option>
-                    <option value="Favourite Food" >Favourite Food</option>
-                    <option value="Favourite City To Visit" >Favourite City To Visit</option>
+                    <option value="Favourite Sport">Favourite Sport</option>
+                    <option value="Favourite Food">Favourite Food</option>
+                    <option value="Favourite City To Visit">
+                      Favourite City To Visit
+                    </option>
                   </select>
                   <label htmlFor="forgetQues">Select Question</label>
                 </div>
@@ -186,7 +195,7 @@ const SignupPage = () => {
                       id="forgetAns"
                       name="forgetAns"
                       value={credentials.forgetAns}
-                      onChange={(e) => onChange(e, 'forgetAns')}
+                      onChange={(e) => onChange(e, "forgetAns")}
                     />
                     <label htmlFor="forgetAns">Answer</label>
                   </div>
