@@ -29,7 +29,7 @@ function App() {
   return (
     <>
       <Router>
-      <Navbar />
+      <Navbar showAlert={showAlert} />
       <Alert alert={alert}/>
       <Routes>
           <Route path="/" element={<Home showAlert={showAlert} />} />  
