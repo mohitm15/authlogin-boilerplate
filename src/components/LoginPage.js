@@ -10,7 +10,7 @@ const [credentials, setCredentials] = useState({email:"",password:""});
 
 const onChange = (e) => {
     setCredentials({ ...credentials, [e.target.name]: e.target.value})
-    console.log(credentials);
+   //console.log(credentials);
 }
 
 
@@ -87,7 +87,7 @@ const goToSignUp = () => {
               </div>
               <div className="d-grid gap-2 my-4 col-6 mx-auto">
               <button type="submit" className="btn btn-success" >
-                Submit
+                Login
               </button>
               </div>
               <hr />
