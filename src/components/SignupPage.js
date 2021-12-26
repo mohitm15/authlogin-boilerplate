@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 
 const SignupPage = (props) => {
   const navigate = useNavigate();
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfmPassword, setShowConfmPassword] = useState(false);
 
   const goToLogin = () => {
     navigate("/login");
@@ -46,16 +48,22 @@ const SignupPage = (props) => {
     const json = await response.json();
     //console.log(json);
 
-    if(json.success === true) {
-      localStorage.setItem('token', json.authToken);
+    if (json.success === true) {
+      localStorage.setItem("token", json.authToken);
       navigate("/");
-      props.showAlert("User Registered Successfully !","info");
+      props.showAlert("User Registered Successfully !", "info");
+    } else {
+      props.showAlert("Invalid Credentials", "danger");
     }
-    else {
-      props.showAlert("Invalid Credentials","danger");
-    }
-
   };
+
+  function togglePasswordVisibilty() {
+    setShowPassword(!showPassword ? true : false);
+  }
+
+  function toggleConfmPasswordVisibilty() {
+    setShowConfmPassword(!showConfmPassword ? true : false);
+  }
 
   return (
     <>
@@ -95,35 +103,97 @@ const SignupPage = (props) => {
               </div>
 
               <div className="mb-3">
-                <label htmlFor="password" className="form-label">
-                  Password
-                </label>
-                <input
-                  type="password"
-                  className="form-control"
-                  id="password"
-                  name="password"
-                  minLength={5}
-                  value={credentials.password}
-                  onChange={(e) => onChange(e, "password")}
-                  required
-                />
+                <div
+                  className="pass-wrapper"
+                  style={{ display: "flex", alignItems: "center" }}
+                >
+                  <label
+                    htmlFor="password"
+                    className="form-label"
+                    style={{ width: "200px" }}
+                  >
+                    Password
+                  </label>
+                  <div
+                    style={{
+                      border: "1px solid #ced4da",
+                      display: "flex",
+                      alignItems: "center",
+                      width: "100%",
+                    }}
+                  >
+                    <input
+                      type={showPassword ? "text" : "password"}
+                      className="form-control mx-3"
+                      id="password"
+                      name="password"
+                      minLength={5}
+                      value={credentials.password}
+                      onChange={(e) => onChange(e, "password")}
+                      style={{ outline: "none", border: 0 }}
+                      required
+                    />
+                    <i
+                      className={
+                        showPassword
+                          ? "fas fa-eye-slash mx-2"
+                          : "fas fa-eye mx-2"
+                      }
+                      title={showPassword ? "Hide Password" : "Show Password"}
+                      onClick={togglePasswordVisibilty}
+                    ></i>
+                  </div>
+                </div>
               </div>
+
               <div className="mb-3">
-                <label htmlFor="confmpassword" className="form-label">
-                  Confirm Password
-                </label>
-                <input
-                  type="password"
-                  className="form-control"
-                  id="confmpassword"
-                  name="confmpassword"
-                  value={credentials.confmpassword}
-                  onChange={(e) => onChange(e, "confmpassword")}
-                  minLength={5}
-                  required
-                />
+                <div
+                  className="pass-wrapper"
+                  style={{ display: "flex", alignItems: "center" }}
+                >
+                  <label
+                    htmlFor="confmpassword"
+                    className="form-label"
+                    style={{ width: "200px" }}
+                  >
+                    Confirm Password
+                  </label>
+                  <div
+                    style={{
+                      border: "1px solid #ced4da",
+                      display: "flex",
+                      alignItems: "center",
+                      width: "100%",
+                    }}
+                  >
+                    <input
+                      type={showConfmPassword ? "text" : "password"}
+                      className="form-control mx-3"
+                      id="confmpassword"
+                      name="confmpassword"
+                      value={credentials.confmpassword}
+                      onChange={(e) => onChange(e, "confmpassword")}
+                      minLength={5}
+                      required
+                      style={{ border: 0, outline: "none" }}
+                    />
+                    <i
+                      className={
+                        showConfmPassword
+                          ? "fas fa-eye-slash mx-2"
+                          : "fas fa-eye mx-2"
+                      }
+                      title={
+                        showConfmPassword
+                          ? "Hide Confirmed Password"
+                          : "Show Confirmed Password"
+                      }
+                      onClick={toggleConfmPasswordVisibilty}
+                    ></i>
+                  </div>
+                </div>
               </div>
+
               <div className="mb-3 col-md">
                 <label htmlFor="role" className="form-label">
                   <strong>Role</strong>
