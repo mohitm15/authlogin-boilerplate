@@ -96,7 +96,7 @@ const LoginPage = (props) => {
                 </div>
               </div>
               <div className="d-grid gap-2 my-4 col-6 mx-auto">
-                <button type="submit" className="btn btn-success col-6 m-auto">
+                <button type="submit" className="btn btn-primary col-6 m-auto">
                   Login
                 </button>
               </div>
@@ -106,7 +106,7 @@ const LoginPage = (props) => {
                   Didn't have an account ?
                 </div>
                 <div className="d-grid gap-2 my-3 col-6 mx-auto">
-                  <button onClick={goToSignUp} className="btn btn-success col-6 m-auto">
+                  <button onClick={goToSignUp} className="btn btn-primary col-6 m-auto">
                     SignUp Here !
                   </button>
                 </div>
