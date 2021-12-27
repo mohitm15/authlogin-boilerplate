@@ -48,7 +48,7 @@ const LoginPage = (props) => {
   return (
     <>
       <div className="container my-3">
-        <div id="loginbody">
+        <div id="loginbody" style={{backgroundColor:"gainsboro",padding:"5%"}}>
           <div className="mt-3">
             <h2 className="my-3 display-3">Login Here</h2>
             <form className="login-form p-5" onSubmit={handleSubmit}>
@@ -74,8 +74,7 @@ const LoginPage = (props) => {
                   Password
                 </label>
                 <div
-                  className="pass-wrapper"
-                  style={{ display: "flex", alignItems: "center" }}
+                  style={{ display: "flex", alignItems: "center", width:"100%", border:"1px solid #ced4da" }}
                 >
                   <input
                     type={showPassword ? "text" : "password"}
@@ -84,6 +83,8 @@ const LoginPage = (props) => {
                     name="password"
                     value={credentials.password}
                     onChange={onChange}
+                    style={{ outline:"none", border:0}}
+                    required
                   />
                   <i
                     className={
@@ -95,7 +96,7 @@ const LoginPage = (props) => {
                 </div>
               </div>
               <div className="d-grid gap-2 my-4 col-6 mx-auto">
-                <button type="submit" className="btn btn-success">
+                <button type="submit" className="btn btn-success col-6 m-auto">
                   Login
                 </button>
               </div>
@@ -105,7 +106,7 @@ const LoginPage = (props) => {
                   Didn't have an account ?
                 </div>
                 <div className="d-grid gap-2 my-3 col-6 mx-auto">
-                  <button onClick={goToSignUp} className="btn btn-success ">
+                  <button onClick={goToSignUp} className="btn btn-success col-6 m-auto">
                     SignUp Here !
                   </button>
                 </div>

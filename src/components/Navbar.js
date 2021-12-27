@@ -31,7 +31,7 @@ const Navbar = (props) => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav">
+            <ul className="navbar-nav me-auto">
               <li className="nav-item">
                 <Link className="nav-link active" aria-current="page" to="/">
                   Home
@@ -45,7 +45,7 @@ const Navbar = (props) => {
             </ul>
 
             {!localStorage.getItem("token") ? (
-              <form className="d-flex">
+              <form className="d-flex ml-auto">
                 <Link
                   className="btn btn-outline-success mx-2"
                   to="/signup"
@@ -71,8 +71,8 @@ const Navbar = (props) => {
                 </button>
               </form>
             )}
+            </div>
           </div>
-        </div>
       </nav>
     </>
   );
