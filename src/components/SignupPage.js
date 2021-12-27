@@ -68,7 +68,10 @@ const SignupPage = (props) => {
   return (
     <>
       <div className="container my-3">
-        <div id="loginbody" style={{backgroundColor:"gainsboro",padding:"3%"}}>
+        <div
+          id="loginbody"
+          style={{ backgroundColor: "gainsboro", padding: "3%" }}
+        >
           <div className="mt-3">
             <h2 className="my-3 display-3">Create your account here </h2>
             <form className="login-form p-5" onSubmit={handleSubmit}>
@@ -283,7 +286,10 @@ const SignupPage = (props) => {
                   Already have an account ?
                 </div>
                 <div className="d-grid gap-2 my-3 col-6 mx-auto">
-                  <button onClick={goToLogin} className="btn btn-primary col-6 m-auto">
+                  <button
+                    onClick={goToLogin}
+                    className="btn btn-primary col-6 m-auto"
+                  >
                     Login Here!
                   </button>
                 </div>
