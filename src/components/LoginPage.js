@@ -118,7 +118,7 @@ const LoginPage = (props) => {
                   onClick={goToForgotPassword}
                   className="btn btn-primary col-6 m-auto my-2"
                 >
-                  Forgot Password
+                  Forgot Password?
                 </button>
               </div>
               <hr />

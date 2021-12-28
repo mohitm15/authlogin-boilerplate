@@ -16,6 +16,7 @@ app.use(express.json());
 app.use('/api/signup',require('./routes/signupRoute'));
 app.use('/api/login',require('./routes/loginRoute'));
 app.use('/api/forgotPassword',require('./routes/forgotPasswordRoute'));
+app.use('/api/changePassword',require('./routes/changePasswordRoute'));
 
 app.listen(PORT, ()=> {
     console.log(`Server listening at http://localhost:${PORT}`)
