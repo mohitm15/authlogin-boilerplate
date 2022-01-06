@@ -1,3 +1,0 @@
-{"_id":{"$oid":"61b36e4efa291e5b7e5d3e10"},"name":"Mayank Maroliya","email":"mayank1@test.com","password":"$2a$10$261vJA3eetasKH4hHUFULOrL6aQNDkULel2vFA7xuJorZ/rVGck8.","role":"guest","forgetQues":"Favourite Sport","forgetAns":"Chess","__v":0}
-{"_id":{"$oid":"61b693b219c203dd2b92b15f"},"name":"Mohit Maroliya","email":"mohit1@test.com","password":"$2a$10$rBIDp0sTa7wOYD6oAXEjpuSxXk1wZL7LlcKomUyyXzj/jHIt0POjG","role":"admin","forgetQues":"Favourite City To Visit","forgetAns":"Tokyo","__v":0}
-{"_id":{"$oid":"61b6951519c203dd2b92b162"},"name":"Abdul Kalam","email":"apj@test.com","password":"$2a$10$vpzZUWxm1ZYIsL4a3VVpku3r05C91ix9MDK.4/.ORVyJRqveGiJ0m","role":"guest","forgetQues":"Favourite Sport","forgetAns":"Cricket","__v":0}

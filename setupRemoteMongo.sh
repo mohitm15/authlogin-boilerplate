@@ -1,1 +1,0 @@
-mongoimport --uri "mongodb+srv://mohit_maroliya:Zker42FNU.buD_E@authlogin-db-cluster.nrdf3.mongodb.net/myFirstDatabase?retryWrites=true&w=majority" --drop --collection users --file data.json
