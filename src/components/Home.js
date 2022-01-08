@@ -7,10 +7,13 @@ const Home = () => {
   if (user) username = user.user.name;
 
   return (
-    <div>
-      <h1 className="text-center p-4 display-2"> Welcome {username} </h1>
-      <h1 className="text-center p-4 display-3">This is Home Page</h1>
-    </div>
+    <>
+      <div className="bg-red-500 h-96 py-80">
+        <h1 className="text-3xl font-bold underline bg-yellow-400">
+          Hello world! , {username}
+        </h1>
+      </div>
+    </>
   );
 };
 
