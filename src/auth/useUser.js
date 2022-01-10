@@ -9,7 +9,7 @@ export const useUser = () => {
         const encodedPayload = token.split('.')[1]
         return JSON.parse(atob(encodedPayload))
     }
-
+    
     const [user,setUser] = useState(() => {
         if(!token) return null;
         return getPayloadFromToken(token);

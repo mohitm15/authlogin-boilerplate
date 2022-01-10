@@ -24,7 +24,7 @@ function App() {
     <>
       <Router>
         <Navbar showAlert={showAlert} />
-        <Alert alert={alert} />
+        {alert === null ? null:<Alert alert={alert} />}
         <Routes>
           <Route path="/" element={<Home showAlert={showAlert} />} />
           <Route
