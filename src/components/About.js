@@ -1,14 +1,19 @@
 import React from "react";
 import { useUser } from "../auth/useUser";
+import errorImgPath from "../assests/badrequest.png";
 import imgPath from "../assests/chess.png";
 
 const About = () => {
   let user = useUser();
   let username = "Guest";
+  let email = "guest@test.com";
+  let role = "guest";
 
-  if (user) username = user.user.name;
-  let email = user.user.email;
-  let role = user.user.role;
+  if (user) {
+    username = user.user.name;
+    email = user.user.email;
+    role = user.user.role;
+  }
 
   return (
     <>
@@ -64,7 +69,7 @@ const About = () => {
             <h1 className="text-6xl text-white w-full text-center">
               Oops ! You have to login first to see your profile :({" "}
             </h1>
-            <img src={imgPath} alt="bad_request" />
+            <img src={errorImgPath} alt="bad_request" />
           </div>
         </div>
       )}
