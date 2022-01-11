@@ -58,7 +58,7 @@ const ForgotPasswordPage = (props) => {
             <h2 className="my-3 text-6xl text-center">Forgot Password</h2>
             <form className="login-form p-5" onSubmit={handleSubmit}>
               <div className="mb-3">
-                <label htmlFor="exampleInputEmail1" className="ock text-gray-800 text-lg font-bold mb-2">
+                <label htmlFor="exampleInputEmail1" className="block text-gray-800 text-lg font-bold mb-2">
                   Email address
                 </label>
                 <input

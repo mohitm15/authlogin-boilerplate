@@ -91,7 +91,7 @@ const LoginPage = (props) => {
                 </div>
               </div>
               <div className="mb-3">
-                <label htmlFor="exampleInputPassword1" className="form-label">
+                <label htmlFor="exampleInputPassword1" className="block text-gray-800 text-lg font-bold mb-2">
                   Password
                 </label>
                 <div
