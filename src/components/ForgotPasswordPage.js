@@ -63,7 +63,7 @@ const ForgotPasswordPage = (props) => {
                 </label>
                 <input
                   type="email"
-                  className="shadow  border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:italic placeholder:text-gray-400"
+                  className="shadow border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:italic placeholder:text-gray-400"
                   placeholder="Type email here..."
                   id="email"
                   name="email"

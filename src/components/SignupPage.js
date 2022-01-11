@@ -67,21 +67,22 @@ const SignupPage = (props) => {
 
   return (
     <>
-      <div className="container my-3">
+      <div className="container mt-10 flex flex-row item-center w-full justify-center">
         <div
           id="loginbody"
-          style={{ backgroundColor: "gainsboro", padding: "3%" }}
+          className="p-5 border-2 border-blue-900 rounded-xl bg-blue-200"
         >
-          <div className="mt-3">
-            <h2 className="my-3 display-3">Create your account here </h2>
+          <div className="m-3">
+            <h2 className="my-3 text-6xl text-center">Create your account here </h2>
             <form className="login-form p-5" onSubmit={handleSubmit}>
               <div className="mb-3">
-                <label htmlFor="name" className="form-label">
+                <label htmlFor="name" className="block text-gray-800 text-lg font-bold mb-2">
                   Name
                 </label>
                 <input
                   type="text"
-                  className="form-control"
+                  className="shadow border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:italic placeholder:text-gray-400"
+                  placeholder="Type name here..."
                   id="name"
                   name="name"
                   value={credentials.name}
@@ -91,12 +92,13 @@ const SignupPage = (props) => {
               </div>
               {/* --------------- */}
               <div className="mb-3">
-                <label htmlFor="email" className="form-label">
+                <label htmlFor="email" className="block text-gray-800 text-lg font-bold mb-2">
                   Email{" "}
                 </label>
                 <input
                   type="email"
-                  className="form-control"
+                  className="shadow border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:italic placeholder:text-gray-400"
+                  placeholder="Type email here..."
                   id="email"
                   name="email"
                   value={credentials.email}
@@ -112,7 +114,7 @@ const SignupPage = (props) => {
                 >
                   <label
                     htmlFor="password"
-                    className="form-label"
+                    className="block text-gray-800 text-lg font-bold mb-2"
                     style={{ width: "200px" }}
                   >
                     Password
@@ -127,7 +129,8 @@ const SignupPage = (props) => {
                   >
                     <input
                       type={showPassword ? "text" : "password"}
-                      className="form-control mx-3"
+                      className="shadow appearance-none border border-red-500 rounded-lg w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:border-sky-700 focus:shadow-outline placeholder:italic placeholder:text-gray-400"
+                      placeholder="Type password here..."
                       id="password"
                       name="password"
                       minLength={5}
@@ -156,7 +159,7 @@ const SignupPage = (props) => {
                 >
                   <label
                     htmlFor="confmpassword"
-                    className="form-label"
+                    className="block text-gray-800 text-lg font-bold"
                     style={{ width: "200px" }}
                   >
                     Confirm Password
@@ -171,7 +174,8 @@ const SignupPage = (props) => {
                   >
                     <input
                       type={showConfmPassword ? "text" : "password"}
-                      className="form-control mx-3"
+                      className="shadow appearance-none border border-red-500 rounded-lg w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:border-sky-700 focus:shadow-outline placeholder:italic placeholder:text-gray-400"
+                      placeholder="Confirm password here..."
                       id="confmpassword"
                       name="confmpassword"
                       value={credentials.confmpassword}
@@ -198,7 +202,7 @@ const SignupPage = (props) => {
               </div>
 
               <div className="mb-3 col-md">
-                <label htmlFor="role" className="form-label">
+                <label htmlFor="role" className="block text-gray-800 text-lg font-bold">
                   <strong>Role</strong>
                 </label>
                 <div className="form-check form-check-inline mx-4">
@@ -244,14 +248,14 @@ const SignupPage = (props) => {
               <div className="mb-3 row">
                 <div className="form-floating col-6">
                   <select
-                    className="form-select"
+                    className="form-select block w-full bg-white border border-gray-400 hover:border-gray-500   rounded-xl shadow "
                     id="forgetQues"
                     name="forgetQues"
                     value={credentials.forgetQues}
                     aria-label="Floating label select example"
                     onChange={(e) => onChange(e, "forgetQues")}
                   >
-                    <option>Open this select menu</option>
+                    <option className="font-italic text-gray-400">Open this select menu</option>
                     <option value="Favourite Sport">Favourite Sport</option>
                     <option value="Favourite Food">Favourite Food</option>
                     <option value="Favourite City To Visit">
@@ -264,7 +268,7 @@ const SignupPage = (props) => {
                   <div className="form-floating mb-3">
                     <input
                       type="text"
-                      className="form-control"
+                      className="form-control rounded-2xl shadow"
                       id="forgetAns"
                       name="forgetAns"
                       value={credentials.forgetAns}
@@ -276,7 +280,7 @@ const SignupPage = (props) => {
               </div>
 
               <div className="d-grid gap-2 my-4 col-6 mx-auto">
-                <button type="submit" className="btn btn-primary col-6 m-auto">
+                <button type="submit" className="bg-cyan-700 hover:bg-cyan-900 text-white px-2 py-2 text-lg font-semibold  hover:border-2 hover:border-white hover:outline hover:outline-cyan-900 rounded-lg">
                   SignUp
                 </button>
               </div>
@@ -288,7 +292,7 @@ const SignupPage = (props) => {
                 <div className="d-grid gap-2 my-3 col-6 mx-auto">
                   <button
                     onClick={goToLogin}
-                    className="btn btn-primary col-6 m-auto"
+                    className="bg-cyan-700 hover:bg-cyan-900 text-white px-2 py-2 text-lg font-semibold  hover:border-2 hover:border-white hover:outline hover:outline-cyan-900 rounded-lg"
                   >
                     Login Here!
                   </button>
