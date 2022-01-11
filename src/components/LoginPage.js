@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import imgPath from "../assests/badrequest.png";
 
 const LoginPage = (props) => {
   let navigate = useNavigate();
@@ -51,21 +52,24 @@ const LoginPage = (props) => {
 
   return (
     <>
-      <div className="container my-3">
-        <div
-          id="loginbody"
-          style={{ backgroundColor: "gainsboro", padding: "5%" }}
-        >
-          <div className="mt-3">
-            <h2 className="my-3 display-3">Login Here</h2>
+      <div className="container w-90 mt-3">
+        <div id="loginbody" className="p-2 border-2 border-blue-900 rounded-xl bg-blue-200 flex flex-row item-center">
+          {/* left col */}
+          <div className="p-10 w-90">
+            <img src={imgPath} alt="imagebadrequest" className="w-97 h-97 m-auto"/>
+          </div>
+          {/* right col */}
+          <div className="p-5 bg-blue-100 border-none shadow-2xl shadow-sky-800 w-95 ml-20 rounded-3xl my-5">
+            <h2 className="my-3 text-6xl text-center">Login Here</h2>
             <form className="login-form p-5" onSubmit={handleSubmit}>
               <div className="mb-3">
-                <label htmlFor="exampleInputEmail1" className="form-label">
+                <label htmlFor="exampleInputEmail1" className="block text-gray-800 text-lg font-bold mb-2">
                   Email address
                 </label>
                 <input
                   type="email"
-                  className="form-control"
+                  className="shadow  border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:italic placeholder:text-gray-400"
+                  placeholder="Type email here..."
                   id="email"
                   name="email"
                   value={credentials.email}
@@ -90,9 +94,10 @@ const LoginPage = (props) => {
                 >
                   <input
                     type={showPassword ? "text" : "password"}
-                    className="form-control"
+                    className="shadow appearance-none border border-red-500 rounded-lg w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline placeholder:italic placeholder:text-gray-400"
                     id="password"
                     name="password"
+                    placeholder="Type password here...  "
                     value={credentials.password}
                     onChange={onChange}
                     style={{ outline: "none", border: 0 }}
@@ -110,13 +115,13 @@ const LoginPage = (props) => {
               <div className="d-grid gap-2 my-4 col-6 mx-auto">
                 <button
                   type="submit"
-                  className="btn btn-primary col-6 m-auto my-2"
+                  className="bg-cyan-700 hover:bg-cyan-900 text-white px-2 py-2 text-lg font-semibold  hover:border-2 hover:border-white hover:outline hover:outline-cyan-900 rounded-lg"
                 >
                   Login
                 </button>
                 <button
                   onClick={goToForgotPassword}
-                  className="btn btn-primary col-6 m-auto my-2"
+                  className="bg-cyan-700 hover:bg-cyan-900 text-white px-2 py-2 text-lg font-semibold  hover:border-2 hover:border-white hover:outline hover:outline-cyan-900 w-full rounded-lg"
                 >
                   Forgot Password?
                 </button>
@@ -126,10 +131,10 @@ const LoginPage = (props) => {
                 <div id="emailHelp" className="form-text center my-3">
                   Didn't have an account ?
                 </div>
-                <div className="d-grid gap-2 my-3 col-6 mx-auto">
+                <div className="d-grid gap-2 col-6 mx-auto">
                   <button
                     onClick={goToSignUp}
-                    className="btn btn-primary col-6 m-auto"
+                    className="bg-cyan-700 hover:bg-cyan-900 text-white px-2 py-2 text-lg font-semibold  hover:border-2 hover:border-white hover:outline hover:outline-cyan-900 rounded-lg"
                   >
                     SignUp Here !
                   </button>
