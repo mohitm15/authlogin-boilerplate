@@ -65,11 +65,11 @@ const About = () => {
         </div>
       ) : (
         <div className="container">
-          <div className="px-10 m-10 flex items-center justify-center border-2 rounded-3xl drop-shadow-lg">
-            <h1 className="text-6xl text-white w-full text-center">
+          <div className="p-10 m-10 flex items-center justify-center flex-col xl:flex-row border-2 rounded-3xl drop-shadow-lg">
+            <h1 className="text-xl md:text-3xl lg:text-5xl xl:text-7xl text-white w-full text-center">
               Oops ! You have to login first to see your profile :({" "}
             </h1>
-            <img src={errorImgPath} alt="bad_request" />
+            <img src={errorImgPath} className="xl:w-3/5" alt="bad_request" />
           </div>
         </div>
       )}

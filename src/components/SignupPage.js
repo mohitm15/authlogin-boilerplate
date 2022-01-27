@@ -67,21 +67,21 @@ const SignupPage = (props) => {
 
   return (
     <>
-      <div className="container mt-10 flex flex-row item-center w-full justify-center">
+      <div className="container mt-3 sm:mt-10 flex flex-row item-center w-full justify-center">
         <div
           id="loginbody"
-          className="p-5 border-2 border-blue-900 rounded-xl bg-blue-200"
+          className="sm:p-5 sm:border-2 border-blue-900 rounded-xl bg-blue-100 w-11/12 lg:w-3/6"
         >
           <div className="m-3">
-            <h2 className="my-3 text-6xl text-center">Create your account here </h2>
-            <form className="login-form p-5" onSubmit={handleSubmit}>
+            <h2 className="my-3 text-2xl font-medium sm:text-4xl lg:text-5xl xl:text-6xl text-center">Create your account here </h2>
+            <form className="login-form p-2 sm:p-5 sm:w-full lg:w-full  " onSubmit={handleSubmit}>
               <div className="mb-3">
-                <label htmlFor="name" className="block text-gray-800 text-lg font-bold mb-2">
+                <label htmlFor="name" className="block text-gray-800 text-base sm:text-lg font-medium sm:font-bold mb-2">
                   Name
                 </label>
                 <input
                   type="text"
-                  className="shadow border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:italic placeholder:text-gray-400"
+                  className="shadow border rounded-md sm:rounded-lg w-full py-2 px-1 sm:px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:italic placeholder:text-gray-400"
                   placeholder="Type name here..."
                   id="name"
                   name="name"
@@ -92,12 +92,12 @@ const SignupPage = (props) => {
               </div>
               {/* --------------- */}
               <div className="mb-3">
-                <label htmlFor="email" className="block text-gray-800 text-lg font-bold mb-2">
+                <label htmlFor="email" className="block text-gray-800 text-base sm:text-lg font-medium sm:font-bold mb-2">
                   Email{" "}
                 </label>
                 <input
                   type="email"
-                  className="shadow border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:italic placeholder:text-gray-400"
+                  className="shadow border rounded-md sm:rounded-lg w-full py-2 px-1 sm:px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:italic placeholder:text-gray-400"
                   placeholder="Type email here..."
                   id="email"
                   name="email"
@@ -108,28 +108,17 @@ const SignupPage = (props) => {
               </div>
 
               <div className="mb-3">
-                <div
-                  className="pass-wrapper"
-                  style={{ display: "flex", alignItems: "center" }}
-                >
+                <div className="flex sm:flex-row flex-col sm:items-baseline">
                   <label
                     htmlFor="password"
-                    className="block text-gray-800 text-lg font-bold mb-2"
-                    style={{ width: "200px" }}
+                    className="block text-gray-800 text-base sm:text-lg font-medium sm:font-bold mb-2 w-2/5"
                   >
                     Password
                   </label>
-                  <div
-                    style={{
-                      border: "1px solid #ced4da",
-                      display: "flex",
-                      alignItems: "center",
-                      width: "100%",
-                    }}
-                  >
+                  <span className="flex flex-row items-center sm:w-3/5">
                     <input
                       type={showPassword ? "text" : "password"}
-                      className="shadow appearance-none border border-red-500 rounded-lg w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:border-sky-700 focus:shadow-outline placeholder:italic placeholder:text-gray-400"
+                      className="shadow appearance-none border border-red-500 rounded-md sm:rounded-lg w-full py-2 px-1 sm:px-3 text-gray-700  leading-tight focus:border-sky-700 focus:shadow-outline placeholder:italic placeholder:text-gray-400"
                       placeholder="Type password here..."
                       id="password"
                       name="password"
@@ -148,33 +137,22 @@ const SignupPage = (props) => {
                       title={showPassword ? "Hide Password" : "Show Password"}
                       onClick={togglePasswordVisibilty}
                     ></i>
-                  </div>
+                  </span>
                 </div>
               </div>
 
               <div className="mb-3">
-                <div
-                  className="pass-wrapper"
-                  style={{ display: "flex", alignItems: "center" }}
-                >
+                <div className="flex sm:flex-row flex-col sm:items-baseline">
                   <label
                     htmlFor="confmpassword"
-                    className="block text-gray-800 text-lg font-bold"
-                    style={{ width: "200px" }}
+                    className="block text-gray-800 text-base sm:text-lg font-medium sm:font-bold w-2/5"
                   >
                     Confirm Password
                   </label>
-                  <div
-                    style={{
-                      border: "1px solid #ced4da",
-                      display: "flex",
-                      alignItems: "center",
-                      width: "100%",
-                    }}
-                  >
+                  <span className="flex flex-row items-center sm:w-3/5">
                     <input
                       type={showConfmPassword ? "text" : "password"}
-                      className="shadow appearance-none border border-red-500 rounded-lg w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:border-sky-700 focus:shadow-outline placeholder:italic placeholder:text-gray-400"
+                      className="shadow appearance-none border border-red-500 rounded-md sm:rounded-lg w-full py-2 px-1 sm:px-3 text-gray-700 leading-tight focus:border-sky-700 focus:shadow-outline placeholder:italic placeholder:text-gray-400"
                       placeholder="Confirm password here..."
                       id="confmpassword"
                       name="confmpassword"
@@ -197,15 +175,16 @@ const SignupPage = (props) => {
                       }
                       onClick={toggleConfmPasswordVisibilty}
                     ></i>
-                  </div>
+                  </span>
                 </div>
               </div>
 
               <div className="mb-3 col-md">
-                <label htmlFor="role" className="block text-gray-800 text-lg font-bold">
-                  <strong>Role</strong>
+                <div className="flex flex-row items-center">
+                <label htmlFor="role" className="block text-gray-800 text-base sm:text-lg font-medium sm:font-bold">
+                  Role
                 </label>
-                <div className="form-check form-check-inline mx-4">
+                <div className="form-check form-check-inline mx-2 sm:mx-4">
                   <input
                     className="form-check-input"
                     type="radio"
@@ -244,11 +223,12 @@ const SignupPage = (props) => {
                     Guest
                   </label>
                 </div>
+                </div>
               </div>
               <div className="mb-3 row">
                 <div className="form-floating col-6">
                   <select
-                    className="form-select block w-full bg-white border border-gray-400 hover:border-gray-500   rounded-xl shadow "
+                    className="form-select block w-full bg-white border border-gray-400 hover:border-gray-500 rounded-md sm:rounded-xl shadow "
                     id="forgetQues"
                     name="forgetQues"
                     value={credentials.forgetQues}
@@ -262,25 +242,25 @@ const SignupPage = (props) => {
                       Favourite City To Visit
                     </option>
                   </select>
-                  <label htmlFor="forgetQues">Select Question</label>
+                  <label htmlFor="forgetQues" className="text-gray-800 text-base sm:text-lg font-medium sm:font-bold">Select Question</label>
                 </div>
                 <div className="col-6">
                   <div className="form-floating mb-3">
                     <input
                       type="text"
-                      className="form-control rounded-2xl shadow"
+                      className="form-control rounded-md sm:rounded-xl shadow"
                       id="forgetAns"
                       name="forgetAns"
                       value={credentials.forgetAns}
                       onChange={(e) => onChange(e, "forgetAns")}
                     />
-                    <label htmlFor="forgetAns">Answer</label>
+                    <label htmlFor="forgetAns" className="text-gray-800 text-base sm:text-lg font-medium sm:font-bold">Answer</label>
                   </div>
                 </div>
               </div>
 
               <div className="d-grid gap-2 my-4 col-6 mx-auto">
-                <button type="submit" className="bg-cyan-700 hover:bg-cyan-900 text-white px-2 py-2 text-lg font-semibold  hover:border-2 hover:border-white hover:outline hover:outline-cyan-900 rounded-lg">
+                <button type="submit" className="bg-cyan-700 hover:bg-cyan-900 text-white  py-2 text-base sm:text-lg font-semibold  hover:border-2 hover:border-white hover:outline hover:outline-cyan-900 rounded-lg">
                   SignUp
                 </button>
               </div>
@@ -292,7 +272,7 @@ const SignupPage = (props) => {
                 <div className="d-grid gap-2 my-3 col-6 mx-auto">
                   <button
                     onClick={goToLogin}
-                    className="bg-cyan-700 hover:bg-cyan-900 text-white px-2 py-2 text-lg font-semibold  hover:border-2 hover:border-white hover:outline hover:outline-cyan-900 rounded-lg"
+                    className="bg-cyan-700 hover:bg-cyan-900 text-white px-2 py-2 text-base sm:text-lg font-semibold  hover:border-2 hover:border-white hover:outline hover:outline-cyan-900 rounded-lg"
                   >
                     Login Here!
                   </button>
