@@ -62,16 +62,16 @@ const ChangePasswordPage = (props) => {
 
   return (
     <>
-      <div className="container mt-10 flex flex-row item-center w-full justify-center">
+      <div className="container p-1 flex flex-row item-center w-full justify-center">
         <div
           id="loginbody"
-          className="p-5 border-2 border-blue-900 rounded-xl bg-blue-200"
+          className="sm:p-5 mt-5 lg:mt-14 border-2 border-blue-900 rounded-xl bg-blue-200"
         >
           <div className="m-3">
-            <h2 className="my-3 text-6xl text-center">Change Password</h2>
-            <form className="login-form p-5" onSubmit={handleSubmit}>
+            <h2 className="my-3 text-2xl font-medium sm:text-4xl lg:text-5xl xl:text-6xl text-center">Change Password</h2>
+            <form className="login-form p-2 sm:p-5" onSubmit={handleSubmit}>
               <div className="mb-3">
-                <label htmlFor="exampleInputEmail1" className="block text-gray-800 text-lg font-bold mb-2">
+                <label htmlFor="exampleInputEmail1" className="block text-gray-800 text-base sm:text-lg font-medium sm:font-bold   mb-2">
                   Email address
                 </label>
                 <input
@@ -84,34 +84,26 @@ const ChangePasswordPage = (props) => {
                   aria-describedby="emailHelp"
                   onChange={onChange}
                 />
-                <div id="emailHelp" className="form-text px-2">
+                <div id="emailHelp" className="form-text sm:px-2">
                   Type email again to ensure your identity.
                 </div>
               </div>
 
-              <div className="mb-3 row">
+              <div className="mb-3">
                 <div
-                  className="pass-wrapper"
-                  style={{ display: "flex", alignItems: "center" }}
+                  className="flex sm:flex-row flex-col sm:items-baseline"
                 >
                   <label
                     htmlFor="newPassword"
-                    className="block text-gray-800 text-lg font-bold mb-2"
-                    style={{ width: "200px" }}
+                    className="block text-gray-800 text-base sm:text-lg font-medium sm:font-bold mb-2 w-3/5"
                   >
                     New Password
                   </label>
-                  <div
-                    style={{
-                      border: "1px solid #ced4da",
-                      display: "flex",
-                      alignItems: "center",
-                      width: "100%",
-                    }}
+                  <span className="flex flex-row items-center sm:w-3/5"
                   >
                     <input
                       type={showPassword ? "text" : "password"}
-                      className="shadow appearance-none border border-red-500 rounded-lg w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:border-sky-700 focus:shadow-outline placeholder:italic placeholder:text-gray-400"
+                      className="shadow appearance-none border border-red-500 rounded-md sm:rounded-lg w-full py-2 px-1 sm:px-3 text-gray-700 mb-3 leading-tight focus:border-sky-700 focus:shadow-outline placeholder:italic placeholder:text-gray-400"
                       placeholder="Type password here..."
                       id="newPassword"
                       name="newPassword"
@@ -132,33 +124,25 @@ const ChangePasswordPage = (props) => {
                       }
                       onClick={togglePasswordVisibilty}
                     ></i>
-                  </div>
+                  </span>
                 </div>
               </div>
 
               <div className="mb-3">
                 <div
-                  className="pass-wrapper"
-                  style={{ display: "flex", alignItems: "center" }}
+                  className="flex sm:flex-row flex-col sm:items-baseline"
                 >
                   <label
                     htmlFor="confmNewPassword"
-                    className="block text-gray-800 text-lg font-bold mb-2"
-                    style={{ width: "200px" }}
+                    className="block text-gray-800 text-base sm:text-lg font-medium sm:font-bold w-3/5"
                   >
                     Confirm New Password
                   </label>
-                  <div
-                    style={{
-                      border: "1px solid #ced4da",
-                      display: "flex",
-                      alignItems: "center",
-                      width: "100%",
-                    }}
+                  <span className="flex flex-row items-center sm:w-3/5"
                   >
                     <input
                       type={showConfmPassword ? "text" : "password"}
-                      className="shadow appearance-none border border-red-500 rounded-lg w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:border-sky-700 focus:shadow-outline placeholder:italic placeholder:text-gray-400"
+                      className="shadow appearance-none border border-red-500 rounded-md sm:rounded-lg w-full py-2 px-1 sm:px-3 text-gray-700 leading-tight focus:border-sky-700 focus:shadow-outline placeholder:italic placeholder:text-gray-400"
                       placeholder="Confirm password here..."
                       id="confmNewPassword"
                       name="confmNewPassword"
@@ -181,14 +165,14 @@ const ChangePasswordPage = (props) => {
                       }
                       onClick={toggleConfmPasswordVisibilty}
                     ></i>
-                  </div>
+                  </span>
                 </div>
               </div>
 
               <div className="d-grid gap-2 my-4 col-6 mx-auto">
                 <button
                   type="submit"
-                  className="bg-cyan-700 hover:bg-cyan-900 text-white px-2 py-2 text-lg font-semibold  hover:border-2 hover:border-white hover:outline hover:outline-cyan-900 rounded-lg"
+                  className="bg-cyan-700 hover:bg-cyan-900 text-white px-2 py-2 text-base sm:text-lg font-semibold  hover:border-2 hover:border-white hover:outline hover:outline-cyan-900 rounded-lg"
                 >
                   Change Password
                 </button>
@@ -201,7 +185,7 @@ const ChangePasswordPage = (props) => {
                 <div className="d-grid gap-2 my-3 col-6 mx-auto">
                   <button
                     onClick={backToForgot}
-                    className="bg-cyan-700 hover:bg-cyan-900 text-white px-2 py-2 text-lg font-semibold  hover:border-2 hover:border-white hover:outline hover:outline-cyan-900 rounded-lg"
+                    className="bg-cyan-700 hover:bg-cyan-900 text-white px-2 py-2 text-base sm:text-lg font-semibold  hover:border-2 hover:border-white hover:outline hover:outline-cyan-900 rounded-lg"
                   >
                     Back
                   </button>

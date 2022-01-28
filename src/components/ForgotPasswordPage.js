@@ -49,21 +49,21 @@ const ForgotPasswordPage = (props) => {
 
   return (
     <>
-      <div className="container mt-10 flex flex-row item-center w-full justify-center ">
+      <div className="container p-1 flex flex-row item-center w-full justify-center ">
         <div
           id="loginbody"
-          className="p-5 border-2 border-blue-900 rounded-xl bg-blue-200"
+          className="sm:p-5 mt-10 lg:mt-14 border-2 border-blue-900 rounded-xl bg-blue-200"
         >
           <div className="m-3">
-            <h2 className="my-3 text-6xl text-center">Forgot Password</h2>
-            <form className="login-form p-5" onSubmit={handleSubmit}>
+            <h2 className="my-3 text-2xl font-medium sm:text-4xl lg:text-5xl xl:text-6xl text-center">Forgot Password</h2>
+            <form className="login-form p-2 sm:p-5" onSubmit={handleSubmit}>
               <div className="mb-3">
-                <label htmlFor="exampleInputEmail1" className="block text-gray-800 text-lg font-bold mb-2">
+                <label htmlFor="exampleInputEmail1" className="block text-gray-800 text-base sm:text-lg font-medium sm:font-bold mb-2">
                   Email address
                 </label>
                 <input
                   type="email"
-                  className="shadow border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:italic placeholder:text-gray-400"
+                  className="shadow border rounded-lg w-full py-2 px-1 sm:px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:italic placeholder:text-gray-400"
                   placeholder="Type email here..."
                   id="email"
                   name="email"
@@ -71,22 +71,22 @@ const ForgotPasswordPage = (props) => {
                   aria-describedby="emailHelp"
                   onChange={onChange}
                 />
-                <div id="emailHelp" className="form-text px-2">
+                <div id="emailHelp" className="form-text px-1 sm:px-2">
                   Type email again to ensure your identity.
                 </div>
               </div>
 
-              <div className="mb-3 row">
-                <div className="form-floating col-6">
+              <div className="mb-3 row flex flex-col sm:flex-row">
+                <div className="form-floating col-12 sm:col-6 mb-3 sm:mb-0">
                   <select
-                    className="form-select block w-full bg-white border border-gray-400 hover:border-gray-500   rounded-xl shadow "
+                    className="form-select block w-full bg-white border border-gray-400 hover:border-gray-500 rounded-md sm:rounded-xl shadow "
                     id="forgetQues"
                     name="forgetQues"
                     value={forgotCredentials.forgetQues}
                     aria-label="Floating label select example"
                     onChange={(e) => onChange(e, "forgetQues")}
                   >
-                    <option className="font-italic text-gray-400">Open this select menu</option>
+                    <option className="font-italic text-gray-400 text-base sm:text-md">Open this select menu</option>
                     <option value="Favourite Sport">Favourite Sport</option>
                     <option value="Favourite Food">Favourite Food</option>
                     <option value="Favourite City To Visit">
@@ -95,11 +95,11 @@ const ForgotPasswordPage = (props) => {
                   </select>
                   <label htmlFor="forgetQues">Select Question</label>
                 </div>
-                <div className="col-6">
+                <div className="col-12 sm:col-6">
                   <div className="form-floating mb-3">
                     <input
                       type="text"
-                      className="form-control rounded-2xl shadow"
+                      className="form-control rounded-md sm:rounded-xl shadow"
                       id="forgetAns"
                       name="forgetAns"
                       value={forgotCredentials.forgetAns}
@@ -113,7 +113,7 @@ const ForgotPasswordPage = (props) => {
               <div className="d-grid gap-2 my-4 col-6 mx-auto">
                 <button
                   type="submit"
-                  className="bg-cyan-700 hover:bg-cyan-900 text-white px-2 py-2 text-lg font-semibold  hover:border-2 hover:border-white hover:outline hover:outline-cyan-900 rounded-lg"
+                  className="bg-cyan-700 hover:bg-cyan-900 text-white px-2 py-2 text-base sm:text-lg font-semibold  hover:border-2 hover:border-white hover:outline hover:outline-cyan-900 rounded-lg"
                 >
                   Confirm Details
                 </button>
@@ -126,7 +126,7 @@ const ForgotPasswordPage = (props) => {
                 <div className="d-grid gap-2 my-3 col-6 mx-auto">
                   <button
                     onClick={backToLogin}
-                    className="bg-cyan-700 hover:bg-cyan-900 text-white px-2 py-2 text-lg font-semibold  hover:border-2 hover:border-white hover:outline hover:outline-cyan-900 rounded-lg"
+                    className="bg-cyan-700 hover:bg-cyan-900 text-white px-3 py-1 text-base sm:text-lg font-semibold  hover:border-2 hover:border-white hover:outline hover:outline-cyan-900 rounded-lg"
                   >
                     Login Again !
                   </button>
