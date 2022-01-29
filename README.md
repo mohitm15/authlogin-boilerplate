@@ -1,70 +1,157 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
 
-### `yarn start`
+  <h3 align="center">authlogin-boilerplate  </h3>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  <p align="center">
+    Starter template for Login System
+    <br />
+    <a href="https://github.com/mohitm15/authlogin-boilerplate"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://authlogin-boilerplate-frontend.vercel.app/">View Demo</a>
+    
+    
+  </p>
+</p>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+       <li><a href="#runningcode">Running the code</a></li>
+      </ul>
+    </li>
+    <li><a href="#rpreview">Preview</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</details>
 
-### `yarn build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+`authlogin-boilerplate` is a web application that can be treated as a starter template to learn the basics of login system from both the ends (frontEnd & backEnd). It includes self-defined APIs for login, signUp and forgot/change Password functionality. It supports responsive UI also. 
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Preview
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Visit the website [here](https://authlogin-boilerplate-frontend.vercel.app/)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### ScreenShots
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+**Desktop View**
 
-## Learn More
+![Screenshot from 2022-01-29 13-11-03](https://user-images.githubusercontent.com/35539313/151652762-c4c1883d-b376-4ba0-8f43-f40ffc18bd67.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**Tablet View**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![Screenshot from 2022-01-29 13-12-18](https://user-images.githubusercontent.com/35539313/151652771-3a6201c7-1129-4d5c-bfae-e9bd23bb09b2.png)
 
-### Code Splitting
+**Mobile View**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+![Screenshot from 2022-01-29 13-11-34](https://user-images.githubusercontent.com/35539313/151652768-faef498a-885e-4df4-9bcc-89db2d0ebbd6.png)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Built With
 
-### Making a Progressive Web App
+* [NodeJS](https://nodejs.org/en/)
+* [ReactJS](https://reactjs.org/)
+* [ExpressJS](https://expressjs.com/)
+* [MongoDB](https://www.mongodb.com/)
+* [TailwindCSS](https://tailwindcss.com/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+<!-- GETTING STARTED -->
+## Getting Started
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+To get a local copy up and running follow these simple steps.
 
-### `yarn build` fails to minify
+### Prerequisites
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Package.json file mentioned the requirements you need to use the software and how to install them.
+* npm
+  ```sh
+  npm install npm@latest -g
+  ```
+
+* Any code editor of your choice (VScode preferable )
+
+### Installation
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/mohitm15/my-notebook.git
+   ```
+2. Install NPM packages and requirements
+   ```sh
+   npm install
+   ```
+
+### Running the code
+
+
+1. To run the frontend server , go to the root directory
+   
+   then go to terminal and run
+
+    ```sh
+        npm start
+    ```
+   
+    The frontend server will run on `localhost:/3000`
+
+2. To run the backend server , open terminal in same directory and run
+    ```sh
+        cd backend
+    ```
+
+    and then 
+    ```sh
+        npm start
+    ```
+   
+    The backend server will run on `localhost:/5000`
+
+<!-- CONTRIBUTING -->
+## Contributing
+
+Contributions are what makes the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+
+
+
+
+<!-- CONTACT -->
+## Contact
+
+Your Name -Mohit Maroliya
+
+Project Link: [https://github.com/mohitm15/authlogin-boilerplate](https://github.com/mohitm15/authlogin-boilerplate)
