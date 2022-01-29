@@ -74,7 +74,7 @@ const SignupPage = (props) => {
         >
           <div className="m-3">
             <h2 className="my-3 text-2xl font-medium sm:text-4xl lg:text-5xl xl:text-6xl text-center">Create your account here </h2>
-            <form className="login-form p-2 sm:p-5 sm:w-full lg:w-full  " onSubmit={handleSubmit}>
+            <form className="login-form p-2 sm:p-5 sm:w-full lg:w-full" onSubmit={handleSubmit}>
               <div className="mb-3">
                 <label htmlFor="name" className="block text-gray-800 text-base sm:text-lg font-medium sm:font-bold mb-2">
                   Name
